@@ -1,0 +1,29 @@
+
+  <div
+    uk-sticky="start: 170; animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-navbar-transparent uk-light; end: ! *; offset:0"
+  >
+    <nav class="uk-navbar-container">
+        <div uk-navbar>
+            <ul class="uk-navbar-nav">
+              <li data-url="/" class="uk-active"><a href="/">Inicio</a></li>
+              <li data-url="/inscripciones"><a href="/inscripciones">Inscripciones</a></li>
+              <li data-url="/sobre-nosotros"><a href="/sobre-nosotros">Sobre la organización</a></li>
+              <li data-url="/guia-de-supervivencia"><a href="/guia-de-supervivencia">Guía de supervivencia</a></li>
+            </ul>
+          </div>
+    </nav>
+  </div>
+
+  <script>
+    const currentPath = window.location.pathname;
+    const navbarLinks = [... document.querySelectorAll('li[data-url]')] as HTMLLIElement[]
+    
+    navbarLinks.forEach(link => {
+      if (currentPath === link.dataset.url) {
+        link.classList.add('uk-active')
+      } else {
+        link.classList.remove('uk-active')
+      }
+    })
+
+  </script>

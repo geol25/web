@@ -10,8 +10,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.12.0",
     "@astrojs/check": "^0.8.2",
+    "astro": "^4.12.0",
+    "franken-ui": "^0.1.0",
+    "postcss": "^8.4.39",
     "typescript": "^5.5.3"
   }
 }
