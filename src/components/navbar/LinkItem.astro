@@ -1,0 +1,22 @@
+---
+interface Props {
+  url: string;
+  className?: string
+}
+const { url, className = '' } = Astro.props;
+---
+<li data-url={url} class={className}><a href={url}> <slot /></a></li>
+
+<script>
+    const currentPath = window.location.pathname;
+    const navigationLinks = [... document.querySelectorAll('li[data-url]')] as HTMLLIElement[]
+    
+    navigationLinks.forEach(link => {
+      if (currentPath === link.dataset.url) {
+        link.classList.add('uk-active')
+      } else {
+        link.classList.remove('uk-active')
+      }
+    })
+
+  </script>

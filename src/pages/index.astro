@@ -1,9 +1,40 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Container from "../components/Container.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>
-		<h1 class="uk-h1">Hello world</h1>
-	</main>
+  <main>
+    <section class="uk-section uk-section-primary min-h-screen flex items-center">
+      <Container>
+        <h1 class="font-bold text-center text-5xl md:text-7xl mx-auto uk-animation-slide-left-small">
+          Conference on End-of-Life:
+          <br />
+          <span class="text-3xl md:text-5xl block mt-5"
+            >Evidence Based Ethics and Policy-making</span
+          >
+        </h1>
+
+        <div class="uk-child-width-1-2@m uk-grid-small uk-grid-match mt-10 text-center" uk-grid>
+          <div>
+            <div class="uk-card uk-card-body uk-card-default uk-animation-slide-bottom-small">
+              <h3 class="uk-card-title"><span uk-icon="icon: location; ratio: 2" aria-label="Location"
+				></span></h3>
+              <p class="uk-margin">
+                Facultad de Filosofía y Letras
+              </p>
+            </div>
+          </div>
+          <div>
+            <div class="uk-card uk-card-body uk-card-default uk-animation-slide-bottom-small">
+              <h3 class="uk-card-title"><span uk-icon="icon: calendar; ratio: 2" aria-label="Date"></span></h3>
+              <p class="uk-margin">
+				24 October 2024 - 26 October 2024
+              </p>
+            </div>
+          </div>
+        </div>
+      </Container>
+    </section>
+  </main>
 </Layout>
