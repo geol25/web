@@ -3,11 +3,13 @@ import Container from "../components/Container.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Home">
   <main>
-    <section class="uk-section uk-section-primary min-h-screen flex items-center">
+    <section class="uk-section uk-background-cover uk-flex uk-flex-center uk-flex-middle uk-height-medium uk-panel min-h-screen uk-background-top-right@m uk-background-bottom-left"
+	style="background-image: url(/hero.webp)">
+	
       <Container>
-        <h1 class="font-bold text-center text-5xl md:text-7xl mx-auto uk-animation-slide-left-small">
+        <h1 class="font-bold text-center text-white text-5xl md:text-7xl mx-auto uk-animation-slide-left-small">
           Conference on End-of-Life:
           <br />
           <span class="text-3xl md:text-5xl block mt-5"
