@@ -1,5 +1,13 @@
 ---
+import { routes } from '../../data';
 import LinkItem from '../navbar/LinkItem.astro';
+
+interface Props {
+  activePage: string;
+}
+
+const { activePage } = Astro.props;
+
 ---
 
 <div id="offcanvas-nav" uk-offcanvas="overlay: true">
@@ -8,10 +16,15 @@ import LinkItem from '../navbar/LinkItem.astro';
         <img src="/logo.webp" alt="logo" />
       </div>
     <ul class="uk-nav-center uk-margin-auto-vertical uk-nav uk-nav-primary">
-        <LinkItem url="/" >Home</LinkItem>
-        <LinkItem url="/submission">Submission</LinkItem>
-        <LinkItem url="/about-us" >About the organization</LinkItem>
-        <LinkItem url="/survival-guide" >Survival guide</LinkItem>
+        { routes.map((route) => (
+            <LinkItem url={route.path} className={
+                activePage === route.path
+                  ? "uk-active"
+                  : ""
+              }>
+                {route.name}
+            </LinkItem>
+        ))}
     </ul>
   </div>
 </div>

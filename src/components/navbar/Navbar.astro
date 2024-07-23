@@ -1,27 +1,48 @@
 ---
-import LinkItem from './LinkItem.astro';
+import LinkItem from "./LinkItem.astro";
+import { routes } from "../../data";
+
+interface Props {
+  activePage: string;
+}
+
+const { activePage } = Astro.props;
 ---
-  <div
-    uk-sticky="start: 170; animation: uk-animation-slide-top; sel-target: .uk-navbar-container uk-background; cls-active: uk-navbar-sticky uk-background-primary; cls-inactive: uk-navbar-transparent uk-light; end: ! *; offset:0"
-  >
-    <nav class="py-2">
-        <div uk-navbar class="uk-container">
-            <div class="uk-navbar-item uk-logo w-14" uk-scrollspy="cls: uk-animation-slide-left; repeat: false; delay: 1050">
-              <img src="/logo.webp" alt="logo" />
-            </div>
-            <ul class="uk-navbar-nav ml-auto">
-              <LinkItem url="/" className='uk-visible@m'>Home</LinkItem>
-              <LinkItem url="/submission" className='uk-visible@m'>Submission</LinkItem>
-              <LinkItem url="/about-us" className='uk-visible@m'>About the organization</LinkItem>
-              <LinkItem url="/survival-guide" className='uk-visible@m'>Survival guide</LinkItem>
-              <li class="uk-hidden@m">
-                <span
-                  class="uk-navbar-toggle-animate uk-navbar-toggle"
-                  uk-navbar-toggle-icon
-                  uk-toggle="target: #offcanvas-nav"
-                ></span>
-              </li>
-            </ul>
-          </div>
-    </nav>
-  </div>
+
+<div
+  uk-sticky="start: 170; animation: uk-animation-slide-top; sel-target: .uk-navbar-container uk-background; cls-active: uk-navbar-sticky uk-background-primary; cls-inactive: uk-navbar-transparent uk-light; end: ! *; offset:0"
+>
+  <nav class="py-2">
+    <div uk-navbar class="uk-container">
+      <div
+        class="uk-navbar-item uk-logo w-14"
+        uk-scrollspy="cls: uk-animation-slide-left; repeat: false; delay: 1050"
+      >
+        <img src="/logo.webp" alt="logo" />
+      </div>
+      <ul class="uk-navbar-nav ml-auto">
+        {
+          routes.map((route) => (
+            <LinkItem
+              url={route.path}
+              className={
+                activePage === route.path
+                  ? "uk-active uk-visible@m"
+                  : "uk-visible@m"
+              }
+            >
+              {route.name}
+            </LinkItem>
+          ))
+        }
+
+        <li class="uk-hidden@m">
+          <span
+            class="uk-navbar-toggle-animate uk-navbar-toggle"
+            uk-navbar-toggle-icon
+            uk-toggle="target: #offcanvas-nav"></span>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>

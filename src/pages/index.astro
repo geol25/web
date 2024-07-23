@@ -3,11 +3,11 @@ import Container from "../components/Container.astro";
 import Layout from "../layouts/Layout.astro";
 import TitleHightlight from "../components/TitleHighlight.astro";
 import CFAButtons from "../components/CFAButtons.astro";
-import { colors } from "../data";
+import { colors } from "../data.ts";
 import CFATopics from "../components/CFATopics.astro";
 ---
 
-<Layout title="Home">
+<Layout title="Home" activePage="/">
   <main class="overflow-hidden has-spinner">
     <section
       class="uk-section uk-background-cover uk-panel uk-background-top-left md:min-h-screen flex items-center -mx-4 px-4"
