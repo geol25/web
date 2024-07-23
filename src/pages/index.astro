@@ -1,42 +1,113 @@
 ---
 import Container from "../components/Container.astro";
 import Layout from "../layouts/Layout.astro";
+import TitleHightlight from "../components/TitleHighlight.astro";
+import CFAButtons from "../components/CFAButtons.astro";
+import { colors } from "../data";
+import CFATopics from "../components/CFATopics.astro";
 ---
 
 <Layout title="Home">
-  <main>
-    <section class="uk-section uk-background-cover uk-flex uk-flex-center uk-flex-middle uk-height-medium uk-panel min-h-screen uk-background-top-right@m uk-background-bottom-left"
-	style="background-image: url(/hero.webp)">
-	
+  <main class="overflow-hidden has-spinner">
+    <section
+      class="uk-section uk-background-cover uk-panel uk-background-top-left md:min-h-screen flex items-center -mx-4 px-4"
+      uk-parallax="bgy: -200; easing: -1"
+      style="background-image: url(/hero.webp)"
+    >
       <Container>
-        <h1 class="font-bold text-center text-white text-5xl md:text-7xl mx-auto uk-animation-slide-left-small">
-          Conference on End-of-Life:
+        <h1
+          class="max-w-lg font-bold text-center text-white text-5xl md:text-7xl mx-auto uk-animation-slide-left-small "
+        >
+          Granada Conference on End-of-Life:
           <br />
-          <span class="text-3xl md:text-5xl block mt-5"
+          <span class="text-3xl md:text-5xl block mt-5 uk-text-italic"
             >Evidence Based Ethics and Policy-making</span
           >
         </h1>
 
-        <div class="uk-child-width-1-2@m uk-grid-small uk-grid-match mt-10 text-center" uk-grid>
+        <div
+          class="uk-child-width-1-2@m uk-grid-small uk-grid-match mt-20 text-center"
+          uk-grid
+        >
           <div>
-            <div class="uk-card uk-card-body uk-card-default uk-animation-slide-bottom-small">
-              <h3 class="uk-card-title"><span uk-icon="icon: location; ratio: 2" aria-label="Location"
-				></span></h3>
+            <div
+              class="uk-card uk-card-body uk-card-default uk-animation-slide-bottom-small"
+            >
+              <h3 class="uk-card-title">
+                <span uk-icon="icon: location; ratio: 2" aria-label="Location"
+                ></span>
+              </h3>
               <p class="uk-margin">
-                Facultad de Filosofía y Letras
+                Sala de Juntas, Carmen de la Victoria. Cta. Del Chapiz, 9,
+                Albaicín, 18010, Granada, Spain
               </p>
+              <a
+                class="mt-5 text-black uk-text-bold"
+                href="https://maps.app.goo.gl/JDMXKBo7hiAA4pL17"
+                target="_blank"
+              >
+                Show me the map &rarr;
+              </a>
             </div>
           </div>
           <div>
-            <div class="uk-card uk-card-body uk-card-default uk-animation-slide-bottom-small">
-              <h3 class="uk-card-title"><span uk-icon="icon: calendar; ratio: 2" aria-label="Date"></span></h3>
+            <div
+              class="uk-card uk-card-body uk-card-default uk-animation-slide-bottom-small"
+            >
+              <h3 class="uk-card-title">
+                <span uk-icon="icon: calendar; ratio: 2" aria-label="Date"
+                ></span>
+              </h3>
               <p class="uk-margin">
-				24 October 2024 - 26 October 2024
+                8 May 2025 - 9 May 2025
               </p>
+				<br />
+
+              <a
+                class="mt-5 text-black uk-text-bold"
+                href="https://calendar.app.google/hFAPSujkb4WngCwg8"
+                target="_blank"
+              >
+                Save the date &rarr;
+              </a>
             </div>
           </div>
         </div>
       </Container>
     </section>
+    <section class="uk-section uk-background-default">
+      <Container>
+        <h2 class="uk-h2 mb-10">
+          About the Granada Conference on End-of-Life
+        </h2>
+        <p class="uk-text-large leading-loose">
+          The <strong>Granada Conference on End-of-Life</strong>: <i>Evidence-based ethics and policy-making</i> welcomes international <strong>scholars</strong>, <strong>clinicians</strong>, <strong>legal experts</strong>, and <strong>policy-makers</strong> interested in <strong>empirical analysis</strong> and <strong>regulatory aspects</strong> related to <strong>medical aid-in-dying (MAID)</strong> and other <strong>end-of-life practices</strong>, including <strong>palliative sedation</strong>, <strong>withholding/withdrawal of life-sustaining-therapies</strong>, and <strong>advanced care planning</strong>, etc.
+        </p>
+      </Container>
+    </section>
+    <section class="uk-section uk-background-default">
+      <Container>
+        <TitleHightlight highlightColor={colors.yellow}>
+          <h2 class="uk-h1 mb-5 uk-text-center w-fit mx-auto">
+            Call For Abstracts
+          </h2>
+        </TitleHightlight>
+        <p class="flex justify-center items-center gap-2 text-2xl flex-col md:flex-row">
+            <span uk-icon="icon: calendar; ratio: 1.5" aria-label="Date"></span>
+            CFA deadline: &nbsp; <u>30 September 2024</u>
+        </p>
+        <p class="text-center font-bold mt-5">
+          gconferenceeol@gmail.com
+        </p>
+        <CFATopics />
+        <CFAButtons />
+      </Container>
+    </section>
   </main>
 </Layout>
+
+<style>
+  .has-spinner {
+    display: none;
+  }
+</style>

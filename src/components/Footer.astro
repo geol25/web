@@ -1,0 +1,43 @@
+---
+import Container from "./Container.astro";
+---
+
+<footer>
+  <Container className="py-20">
+    <div class="footer-wrapper uk-child-width-1-4@l uk-child-width-1-2@m uk-grid-big" uk-grid>
+      <div class="flex items-center justify-center img-container">
+        <img src="/UGR.webp" alt="ugr logo"  />
+      </div>
+
+      <div class="flex items-center justify-center img-container">
+        <img src="/inedyto.webp" alt="inedyto logo" />
+      </div>
+
+      <div class="flex items-center justify-center img-container">
+        <img
+          src="/ministerio.webp"
+          alt="ministerio de ciencia y universidades logo"
+        />
+      </div>
+
+      <div class="flex items-center justify-center img-container">
+        <img src="/espacyos.webp" alt="espacyos logo" />
+      </div>
+    </div>
+    <p class="text-center mt-10"> © 2024 <a href="https://github.com/alpalma95" target="_blank" class="underline">Álvaro Palma</a></p>
+  </Container>
+</footer>
+
+<style>
+  footer {
+    background-color: rgb(200, 189, 138);
+  }
+
+  .footer-wrapper {
+    justify-content: space-around;
+  }
+
+  .img-container {
+    max-width: 320px;
+  }
+</style>

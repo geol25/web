@@ -3,12 +3,12 @@ declare interface Props {
     className?: string;
 }
 
-const { className = '' } = Astro.props as Props;
+const { className = '' , ...rest} = Astro.props as Props;
 
 const completeClassName = `uk-container ${className}`.trim();
 
 ---
 
-<div class={completeClassName}>
+<div class={completeClassName}, {...rest}>
     <slot />
 </div>

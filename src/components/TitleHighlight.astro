@@ -1,0 +1,51 @@
+---
+interface Props {
+  highlightColor?: string;
+  delay?: number;
+}
+
+const { highlightColor = '#fde758', delay = 500 } = Astro.props;
+const config = `cls: effect-active; repeat: true; delay: ${delay}; hidden: false;`
+---
+
+<div
+  class="textmarker-effect w-fit mx-auto"
+  uk-scrollspy={config}
+>
+  <slot />
+</div>
+
+<style define:vars={{ highlightColor }}>
+  .textmarker-effect {
+    position: relative;
+    padding-left: 10px;
+    padding-right: 10px;
+    z-index: 1;
+  }
+
+  .textmarker-effect:before {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    background: var(--highlightColor);
+    height: 50%;
+    left: 0;
+    transform: rotate(-2deg);
+    bottom: -5px;
+    width: 0%;
+    opacity: 1;
+    transition: width 0.5s;
+  }
+
+  .textmarker-effect:hover {
+    cursor: pointer;
+  }
+
+  .textmarker-active.textmarker-effect:before {
+    width: 100%;
+  }
+
+  .effect-active.textmarker-effect:before {
+    width: 100%;
+  }
+</style>

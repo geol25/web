@@ -5,7 +5,7 @@ interface Props {
 }
 const { url, className = '' } = Astro.props;
 ---
-<li data-url={url} class={className}><a href={url}> <slot /></a></li>
+<li data-url={url} class={className + " font-bold"}><a href={url}> <slot /></a></li>
 
 <script>
     const currentPath = window.location.pathname;
@@ -20,3 +20,9 @@ const { url, className = '' } = Astro.props;
     })
 
   </script>
+
+  <style>
+    a {
+      font-size: 1.1rem !important;
+    }
+  </style>

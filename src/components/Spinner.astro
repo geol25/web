@@ -1,0 +1,42 @@
+<div class="spinner-container" data-id="spinner">
+    <div class="spinner">
+      <img src="/logo.webp" alt="">
+    </div>
+</div>
+<style>
+  .spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: white;
+    position: absolute;
+    inset: 0;
+    z-index: 1000;
+  }
+
+  .spinner {
+    width: 18rem;
+    animation: spin 1s ease-in-out ;
+    -webkit-animation: spin 1s ease-in-out ;
+  }
+
+  @keyframes spin {
+    to {
+      -webkit-transform: rotate(360deg);
+    }
+}
+</style>
+
+<script>
+  const spinner = document.querySelector('[data-id="spinner"]');
+ 
+  setTimeout(() => {
+    spinner?.classList.add('uk-animation-slide-top')
+    spinner?.classList.add('uk-animation-reverse')
+    document.querySelector('main')?.classList.remove('has-spinner')
+  }, 1000);
+  setTimeout(() => {
+    spinner?.remove()
+  }, 1200);
+</script>

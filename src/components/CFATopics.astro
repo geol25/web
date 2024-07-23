@@ -1,0 +1,62 @@
+<div class="mt-10">
+  <h3 class="uk-h2 text-center">
+    Presentations are welcome on the following categories:
+  </h3>
+
+  <ul class="mt-10">
+    <li>
+      Oversight and data reporting on MAID and other end-of-life practices
+    </li>
+    <li>Eligibility criteria for MAID</li>
+    <li>
+      Issues related to non-conventional MAID: children, dementia, psychiatry,
+      prisoners, tired-of living
+    </li>
+    <li>
+      Withdrawal/withholding of life-sustaining treatment and medical futility
+    </li>
+    <li>Palliative care and palliative sedation</li>
+    <li>Respect for autonomy in end-of-life, and advance directives</li>
+    <li>Conscientious objection</li>
+    <li>Allocation of potentially life-sustaining treatment</li>
+    <li>End-of-life and organ donation</li>
+  </ul>
+</div>
+
+<style>
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+
+    max-width: 720px;
+    margin-inline: auto;
+  }
+
+  li {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding-left: 2rem;
+    position: relative;
+  }
+
+  li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+  }
+  li:nth-child(1n)::before {
+    background-color: var(--purple);
+  }
+  li:nth-child(2n)::before {
+    background-color: var(--red);
+  }
+  li:nth-child(3n)::before {
+    background-color: var(--primary-over);
+  }
+</style>

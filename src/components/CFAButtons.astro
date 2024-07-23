@@ -1,0 +1,37 @@
+---
+import { colors } from "../data";
+import TitleHighlight from "./TitleHighlight.astro";
+---
+
+<div
+  class="flex justify-center items-center gap-5 mt-10 flex-col md:flex-row max-w-3xl mx-auto"
+>
+  <button
+    class="hover:-translate-y-2 transition-all py-4 h-fit text-center border-none font-bold text-2xl w-10/12 md:w-1/2"
+  >
+    <TitleHighlight highlightColor={colors.purple} delay={600}>
+        <span class="btn-content">
+            CFA <span uk-icon="icon: chevron-double-right; ratio: 1.5"></span>
+        </span>
+    </TitleHighlight>
+  </button>
+  <a
+    href="/submission"
+    class="hover:-translate-y-2 transition-all py-4 h-fit text-center border-none font-bold text-2xl w-10/12 md:w-1/2"
+  >
+    <TitleHighlight highlightColor={colors.red} delay={700}>
+        <span class="btn-content">
+            Submission <span uk-icon="icon: chevron-double-right; ratio: 2"></span>
+        </span>
+    </TitleHighlight>
+  </a>
+</div>
+
+<style>
+    .btn-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+</style>
