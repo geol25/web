@@ -28,7 +28,9 @@ const { title, activePage } = Astro.props;
 	</head>
 	<body>
 		<Navbar activePage={activePage} />
-		<slot />
+		<main class="overflow-hidden">
+			<slot />
+		</main>
 		<aside>
 			<OffCanvas activePage={activePage} />
 		</aside>
@@ -46,5 +48,8 @@ const { title, activePage } = Astro.props;
 		--primary-over: #fde758;
 		--red: #EF9CA6;
 		--purple: #CE98FF;
+	}
+	.has-spinner {
+		display: none;
 	}
 </style>

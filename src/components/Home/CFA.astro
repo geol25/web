@@ -1,0 +1,27 @@
+---
+import CFAButtons from "../CFAButtons.astro";
+import CFATopics from "../CFATopics.astro";
+import Container from "../Container.astro";
+import TitleHighlight from "../../components/TitleHighlight.astro";
+import { colors } from "../../data";
+
+---
+
+<section class="uk-section uk-background-default">
+  <Container>
+    <TitleHighlight highlightColor={colors.yellow}>
+      <h2 class="uk-h1 mb-5 uk-text-center w-fit mx-auto">
+        Call For Abstracts
+      </h2>
+    </TitleHighlight>
+    <p
+      class="flex justify-center items-center gap-2 text-2xl flex-col md:flex-row"
+    >
+      <span uk-icon="icon: calendar; ratio: 1.5" aria-label="Date"></span>
+      CFA deadline: &nbsp; <u>30 September 2024</u>
+    </p>
+    <p class="text-center font-bold mt-5">gconferenceeol@gmail.com</p>
+    <CFATopics />
+    <CFAButtons />
+  </Container>
+</section>

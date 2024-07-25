@@ -1,0 +1,145 @@
+---
+interface Props {
+  name: string;
+  image: string;
+  description: string;
+  country: string;
+  slideFrom: "left" | "right";
+  organizer?: boolean;
+}
+
+const { name, image, description, country, organizer = false } = Astro.props;
+const { slideFrom = "" } = Astro.props;
+const classList = `card yellow ${organizer ? "organizer" : ""}`;
+---
+
+<div
+  class={classList}
+  uk-scrollspy={`cls: uk-animation-slide-${!organizer ? slideFrom : "left"}-small; delay: 700;`}
+>
+  <div class="image-wrapper">
+    {image !== "" ? <img src={image} alt={name} /> : null}
+  </div>
+  <div class="content">
+    <h2 class="name uk-h3">{name}</h2>
+    <p class="description">{description}</p>
+    {
+      country !== "" ? (
+        <p class="pill">
+          <span uk-icon="icon: world; ratio: 1" /> {country}
+        </p>
+      ) : null
+    }
+  </div>
+</div>
+
+<style>
+  .yellow {
+    background-color: var(--primary-over);
+    border-radius: 16px;
+  }
+
+  .red {
+    background-color: var(--red);
+    border-radius: 16px;
+  }
+
+  .card {
+    display: flex;
+    padding: 16px;
+    gap: 24px;
+    max-width: 70%;
+    align-items: center;
+    z-index: 4;
+  }
+
+  .image-wrapper {
+    width: 30%;
+    min-width: 200px;
+  }
+
+  .content {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .name {
+    font-size: 32px;
+  }
+  .description {
+    font-size: 24px;
+  }
+  .pill {
+    font-size: 16px;
+    padding: 8px;
+    margin-top: 8px;
+    background-color: black;
+    border-radius: 4px;
+    color: white;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  img {
+    max-width: 100%;
+    height: 200px;
+    width: 200px;
+    border-radius: 10%;
+    object-fit: cover;
+    filter: grayscale(1);
+  }
+
+  .organizer .image-wrapper {
+    display: none;
+  }
+
+  @media (min-width: 790px) {
+    .card:nth-child(odd):not(.organizer) {
+      margin-right: auto;
+    }
+    .card:nth-child(even):not(.organizer) {
+      margin-left: auto;
+      flex-direction: row-reverse;
+    }
+
+    .card:nth-child(even):not(.organizer) * {
+      text-align: right;
+    }
+
+    .card:nth-child(even) .pill {
+      margin-left: auto;
+    }
+
+    .organizer {
+      justify-content: start;
+    }
+  }
+
+  @media (max-width: 789px) {
+    .card {
+      flex-direction: column;
+      max-width: 100%;
+      justify-content: center;
+    }
+
+    .image-wrapper {
+      width: 100%;
+      text-align: center;
+    }
+    img {
+      margin-inline: auto;
+    }
+    .content {
+      width: 100%;
+      text-align: center;
+    }
+
+    .pill {
+      margin-inline: auto;
+    }
+  }
+</style>

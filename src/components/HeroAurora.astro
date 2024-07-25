@@ -1,0 +1,118 @@
+<section class="uk-section aurora">
+    <div class="red aurora-dot"></div>
+    <div class="purple aurora-dot"></div>
+    <div class="yellow aurora-dot"></div>
+
+    <div class="red2 aurora-dot"></div>
+    <div class="purple2 aurora-dot"></div>
+    <div class="yellow2 aurora-dot"></div>
+
+    <div class="red3 aurora-dot"></div>
+    <div class="purple3 aurora-dot"></div>
+    <div class="yellow3 aurora-dot"></div>
+
+    <slot />
+
+	<div class="arrow">
+		<div class="arrow-wrapper">
+			<span class="" uk-icon="icon: chevron-double-right; ratio: 4"></span>
+		</div>
+	</div>
+
+</section>
+
+<style>
+
+    .aurora {
+		min-height: 75vh;
+		position: relative;
+	}
+
+	.aurora-dot {
+		height: 350px;
+		width: 350px;
+		position: absolute;
+		border-radius: 50%;
+		filter: blur(120px);
+	}
+
+	.red {
+		background-color: var(--red);
+		top: 4%;
+    	left: 20%;
+	}
+	.red2 {
+		background-color: var(--red);
+		right: 20%;
+		top: 56%;
+	}
+
+	.red3 {
+		background-color: var(--red);
+		right: 0%;
+		top: 0%;
+	}
+
+	.purple {
+		background-color: var(--primary-over);
+		top: 33%;
+    	right: 2%;
+	}
+
+	.purple2 {
+		background-color: var(--primary-over);
+		left: -7%;
+    	bottom: 50%;
+	}
+
+	.purple3 {
+		background-color: var(--primary-over);
+		left: 0%;
+		bottom: 0%;
+	}
+
+	.yellow {
+		background-color: var(--primary-over);
+		bottom: -6%;
+    	left: 27%;
+	}
+	.yellow2 {
+		background-color: var(--primary-over);
+		right: 30%;
+    	top: -3%;
+	}
+	.yellow3 {
+		background-color: var(--primary-over);
+		bottom: 0%;
+		left: 0%;
+	}
+
+	.arrow {
+		position: absolute;
+		bottom: 1%;
+		width: 100%;
+		text-align: center;
+		animation: down-up 1s ease-in-out infinite;
+	}
+
+	.arrow-wrapper {
+		transform: rotate(90deg);
+	}
+
+	.arrow svg {
+		transform: rotate(90deg);
+		margin-inline: auto;
+	}
+
+
+	@keyframes down-up {
+		0% {
+			transform: translateY(0);
+			opacity: 1;
+		}
+		50% {
+			transform: translateY(16px);
+			opacity: .5;
+		}
+	}
+</style>

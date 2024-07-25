@@ -5,21 +5,42 @@
 
   <ul class="mt-10">
     <li>
+      <span uk-icon="icon: chevron-double-right; ratio: 1.5"></span>
       Oversight and data reporting on MAID and other end-of-life practices
     </li>
-    <li>Eligibility criteria for MAID</li>
     <li>
-      Issues related to non-conventional MAID: children, dementia, psychiatry,
-      prisoners, tired-of living
+      <span uk-icon="icon: chevron-double-right; ratio: 1.5"></span>
+      Eligibility criteria for MAID
     </li>
     <li>
+      <span uk-icon="icon: chevron-double-right; ratio: 1.5"></span>
+      Issues related to non-conventional MAID: children, dementia, psychiatry, prisoners,
+      tired-of living
+    </li>
+    <li>
+      <span uk-icon="icon: chevron-double-right; ratio: 1.5"></span>
       Withdrawal/withholding of life-sustaining treatment and medical futility
     </li>
-    <li>Palliative care and palliative sedation</li>
-    <li>Respect for autonomy in end-of-life, and advance directives</li>
-    <li>Conscientious objection</li>
-    <li>Allocation of potentially life-sustaining treatment</li>
-    <li>End-of-life and organ donation</li>
+    <li>
+      <span uk-icon="icon: chevron-double-right; ratio: 1.5"></span>Palliative
+      care and palliative sedation
+    </li>
+    <li>
+      <span uk-icon="icon: chevron-double-right; ratio: 1.5"></span>Respect for
+      autonomy in end-of-life, and advance directives
+    </li>
+    <li>
+      <span uk-icon="icon: chevron-double-right; ratio: 1.5"></span>Conscientious
+      objection
+    </li>
+    <li>
+      <span uk-icon="icon: chevron-double-right; ratio: 1.5"></span>Allocation of
+      potentially life-sustaining treatment
+    </li>
+    <li>
+      <span uk-icon="icon: chevron-double-right; ratio: 1.5"></span>End-of-life
+      and organ donation
+    </li>
   </ul>
 </div>
 
@@ -33,30 +54,12 @@
   }
 
   li {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     font-size: 1.2rem;
     font-weight: 500;
-    padding-left: 2rem;
     position: relative;
-  }
-
-  li::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 1rem;
-    height: 1rem;
-    border-radius: 50%;
-  }
-  li:nth-child(1n)::before {
-    background-color: var(--purple);
-  }
-  li:nth-child(2n)::before {
-    background-color: var(--red);
-  }
-  li:nth-child(3n)::before {
-    background-color: var(--primary-over);
+    display: flex;
+    align-items: center;
+    gap: 8px;
   }
 </style>

@@ -1,12 +1,28 @@
 ---
 import Container from '../components/Container.astro';
+import HeroAurora from '../components/HeroAurora.astro';
+import PeopleSection from '../components/PeopleSection.astro';
+import { organizers } from '../data';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="About" activePage="/about-the-conference">
 	<main>
+		<HeroAurora>
+			<h1 class="block title font-bold text-5xl md:text-7xl uk-animation-slide-left-small">About the Conference</h1>
+		</HeroAurora>
+	
 		<Container>
-			<h1 class="uk-h1">About the Conference</h1>
+		  <PeopleSection people={organizers} organizers={true} />
 		</Container>
-	</main>
+	  </main>
 </Layout>
+<style>
+	.title {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 100%;
+		text-align: center;
+	}
+</style>

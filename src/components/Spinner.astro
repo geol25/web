@@ -1,6 +1,6 @@
 <div class="spinner-container" data-id="spinner">
     <div class="spinner">
-      <img src="/logo.webp" alt="">
+      <img src="/logo.webp" alt="Loading">
     </div>
 </div>
 <style>
@@ -23,7 +23,7 @@
 
   @keyframes spin {
     to {
-      -webkit-transform: rotate(360deg);
+      -webkit-transform: rotate(180deg);
     }
 }
 </style>
@@ -32,11 +32,12 @@
   const spinner = document.querySelector('[data-id="spinner"]');
  
   setTimeout(() => {
-    spinner?.classList.add('uk-animation-slide-top')
     spinner?.classList.add('uk-animation-reverse')
-    document.querySelector('main')?.classList.remove('has-spinner')
-  }, 1000);
-  setTimeout(() => {
-    spinner?.remove()
-  }, 1200);
+    spinner?.classList.add('uk-animation-slide-top')
+    // document.querySelector('main')?.classList.remove('has-spinner')
+    setTimeout(() => {
+      spinner?.remove()
+    }, 100);
+  }, 800);
+ 
 </script>

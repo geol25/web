@@ -1,0 +1,70 @@
+---
+import Container from "../Container.astro";
+---
+
+<section
+      class="uk-section uk-background-cover uk-panel uk-background-top-left md:min-h-screen flex items-center -mx-4 px-4"
+      uk-parallax="bgy: -200; easing: -1"
+      style="background-image: url(/hero.webp)"
+    >
+      <Container>
+        <h1
+          class="main-title max-w-lg font-bold text-center text-white text-5xl md:text-7xl mx-auto uk-animation-slide-left-small "
+        >
+          Granada Conference on End-of-Life:
+          <br />
+          <span class="text-3xl md:text-5xl block mt-5 uk-text-italic"
+            >Evidence Based Ethics and Policy-making</span
+          >
+        </h1>
+
+        <div
+          class="uk-child-width-1-2@m uk-grid-small uk-grid-match mt-20 text-center"
+          uk-grid
+        >
+          <div>
+            <div
+              class="uk-card uk-card-body uk-card-default uk-animation-slide-bottom-small"
+            >
+              <h3 class="uk-card-title">
+                <span uk-icon="icon: location; ratio: 2" aria-label="Location"
+                ></span>
+              </h3>
+              <p class="uk-margin font-bold text-2xl">
+                Sala de Juntas, Carmen de la Victoria. Cta. Del Chapiz, 9,
+                Albaicín, 18010, Granada, Spain
+              </p>
+              <a
+                class="mt-5 text-black uk-text-bold"
+                href="https://maps.app.goo.gl/JDMXKBo7hiAA4pL17"
+                target="_blank"
+              >
+                Show me the map &rarr;
+              </a>
+            </div>
+          </div>
+          <div>
+            <div
+              class="uk-card uk-card-body uk-card-default uk-animation-slide-bottom-small"
+            >
+              <h3 class="uk-card-title">
+                <span uk-icon="icon: calendar; ratio: 2" aria-label="Date"
+                ></span>
+              </h3>
+              <p class="uk-margin font-bold text-2xl">
+                8 May 2025 - 9 May 2025
+              </p>
+				<br />
+
+              <a
+                class="mt-5 text-black uk-text-bold"
+                href="https://calendar.app.google/hFAPSujkb4WngCwg8"
+                target="_blank"
+              >
+                Save the date &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
+      </Container>
+    </section>

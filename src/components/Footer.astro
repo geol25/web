@@ -31,6 +31,15 @@ import Container from "./Container.astro";
 <style>
   footer {
     background-color: rgb(200, 189, 138);
+    position: relative;
+    overflow:hidden;
+    background-color: #fff;
+    background-image: 
+      radial-gradient(at top left, var(--primary-over), transparent),
+      radial-gradient(at top right, var(--red), transparent),
+      radial-gradient(at bottom left, var(--primary-over), transparent);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
   }
 
   .footer-wrapper {

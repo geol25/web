@@ -1,0 +1,37 @@
+---
+import type { Person } from "../data";
+import PersonCard from "./PersonCard.astro";
+
+interface Props {
+    people: Person[];
+    organizers?: boolean;
+}
+
+const { people, organizers = false } = Astro.props;
+---
+
+<section class="uk-section">
+    <div class="wrapper">
+        {
+            people.map((person, index) => (
+                <PersonCard
+                    name={person.name}
+                    image={person.image}
+                    description={person.description}
+                    country={person.country}
+                    slideFrom={index % 2 === 0 ? 'left' : 'right'}
+                    organizer={organizers}
+                />
+            ))
+        }
+    </div>
+  </section>
+
+  <style>
+    .wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 32px;
+		margin-top: 64px;
+	}
+  </style>
