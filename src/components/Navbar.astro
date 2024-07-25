@@ -14,12 +14,13 @@ const { activePage } = Astro.props;
 >
   <nav class="py-2">
     <div uk-navbar class="uk-container">
-      <div
+      <a
+        href="/"
         class="uk-navbar-item uk-logo w-14"
         uk-scrollspy="cls: uk-animation-slide-left; repeat: false; delay: 1050"
       >
         <img src="/logo.webp" alt="logo" />
-      </div>
+      </a>
       <ul class="uk-navbar-nav ml-auto">
         {
           routes.map((route) => (

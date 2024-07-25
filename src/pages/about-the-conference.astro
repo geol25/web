@@ -1,28 +1,49 @@
 ---
-import Container from '../components/Container.astro';
-import HeroAurora from '../components/HeroAurora.astro';
-import PeopleSection from '../components/PeopleSection.astro';
-import { organizers } from '../data';
-import Layout from '../layouts/Layout.astro';
+import Container from "../components/Container.astro";
+import HeroAurora from "../components/HeroAurora.astro";
+import PeopleSection from "../components/PeopleSection.astro";
+import { organizers } from "../data";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="About" activePage="/about-the-conference">
-	<main>
-		<HeroAurora>
-			<h1 class="block title font-bold text-5xl md:text-7xl uk-animation-slide-left-small">About the Conference</h1>
-		</HeroAurora>
-	
-		<Container>
-		  <PeopleSection people={organizers} organizers={true} />
-		</Container>
-	  </main>
+  <main>
+    <HeroAurora>
+      <h1
+        class="block title font-bold text-5xl md:text-7xl uk-animation-slide-left-small"
+      >
+        About the Conference
+      </h1>
+    </HeroAurora>
+
+    <Container>
+		<section class="uk-section uk-background-default mt-48 md:mt-24">
+			<div class="flex justify-center items-center gap-2 text-2xl flex-col md:flex-row">
+				<span uk-icon="icon: mail; ratio: 4" aria-label="Info"></span>
+			</div>
+			<h2 class="uk-h1 text-center ">Granada Conference on End-of-Life</h2>
+			<div class="my-10 divider"></div>
+			<p class="text-center uk-h2 font-normal">More information and queries: <br> <a href="mailto:gconferenceeol@gmail.com" class="block mt-2 font-bold underline text-xl">gconferenceeol@gmail.com</a></p>
+
+		</section>
+
+      <h2 class="uk-h1 text-center mt-5 -mb-10">Organizers</h2>
+      <PeopleSection people={organizers} organizers={true} />
+    </Container>
+  </main>
 </Layout>
 <style>
-	.title {
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
-		width: 100%;
-		text-align: center;
-	}
+  .title {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+  }
+
+  .divider {
+		border-bottom: 3px solid black;
+		max-width: 200px;
+		margin-inline: auto;
+  }
 </style>

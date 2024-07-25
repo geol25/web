@@ -48,9 +48,12 @@ const classList = `card yellow ${organizer ? "organizer" : ""}`;
     display: flex;
     padding: 16px;
     gap: 24px;
-    max-width: 70%;
     align-items: center;
     z-index: 4;
+  }
+
+  .card:not(.organizer) {
+    max-width: 70%;
   }
 
   .image-wrapper {

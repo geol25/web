@@ -34,7 +34,8 @@
   setTimeout(() => {
     spinner?.classList.add('uk-animation-reverse')
     spinner?.classList.add('uk-animation-slide-top')
-    // document.querySelector('main')?.classList.remove('has-spinner')
+    document.querySelector('main')?.classList.remove('has-spinner')
+    document.querySelector('footer')?.classList.remove('has-spinner')
     setTimeout(() => {
       spinner?.remove()
     }, 100);
