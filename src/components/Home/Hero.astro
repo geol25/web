@@ -15,10 +15,10 @@ import Container from "../Container.astro";
     </h1>
 
     <div
-      class="uk-child-width-1-2@m uk-grid-small uk-grid-match mt-20 text-center"
-      uk-grid
+      class="mt-20 text-center cards-container flex-col md:flex-row"
+      
     >
-      <div>
+      <div class="card">
         <div
           class="uk-card uk-card-body uk-card-default uk-animation-slide-bottom-small"
         >
@@ -39,7 +39,7 @@ import Container from "../Container.astro";
           </a>
         </div>
       </div>
-      <div>
+      <div class="card">
         <div
           class="uk-card uk-card-body uk-card-default uk-animation-slide-bottom-small"
         >
@@ -69,5 +69,27 @@ import Container from "../Container.astro";
     background-position: center;
     padding-top: 5rem;
     padding-bottom: 2rem;
+  }
+
+  .cards-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 32px;
+  }
+  .card {
+    width: 50%;
+  }
+
+  @media (max-width: 768px) {
+    .card {
+      width: 100%;
+    }
+  }
+  .uk-card {
+    height: 100% !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 </style>
