@@ -4,24 +4,37 @@ import Container from "./Container.astro";
 
 <footer class="has-spinner">
   <Container className="py-20">
-    <div class="footer-wrapper uk-child-width-1-4@l uk-child-width-1-2@m uk-grid-big" uk-grid>
-      <div class="flex items-center justify-center img-container">
-        <img src="/UGR.webp" alt="ugr logo"  />
+    <div class="footer-wrapper">
+      <div class="img-container">
+        <img src="/logos/UGR.webp" alt="ugr logo"  />
       </div>
 
-      <div class="flex items-center justify-center img-container">
-        <img src="/inedyto.webp" alt="inedyto logo" />
+      <div class="img-container">
+        <img src="/logos/inedyto.webp" alt="inedyto logo" />
       </div>
 
-      <div class="flex items-center justify-center img-container">
+      <div class="img-container">
         <img
-          src="/ministerio.webp"
+          src="/logos/ministerio.webp"
           alt="ministerio de ciencia y universidades logo"
         />
       </div>
+      
+      <div class="img-container">
+        <img src="/logos/filolab.webp" alt="espacyos logo" />
+      </div>
 
-      <div class="flex items-center justify-center img-container">
-        <img src="/espacyos.webp" alt="espacyos logo" />
+      <div class="img-container">
+        <img src="/logos/espacyos.webp" alt="espacyos logo" />
+      </div>
+
+
+      <div class="img-container">
+        <img src="/logos/espacyos.webp" alt="espacyos logo" />
+      </div>
+
+      <div class="img-container">
+        <img src="/logos/espacyos.webp" alt="espacyos logo" />
       </div>
     </div>
     <p class="text-center mt-10"> © 2024 <a href="https://github.com/alpalma95" target="_blank" class="underline">Álvaro Palma</a></p>
@@ -44,6 +57,10 @@ import Container from "./Container.astro";
 
   .footer-wrapper {
     justify-content: space-around;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    flex-wrap: wrap;
   }
 
   .img-container {

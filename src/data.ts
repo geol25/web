@@ -20,10 +20,10 @@ export const routes: { name: string; path: string }[] = [
 ];
 
 export interface Person {
-    name: string;
-    image: string;
-    description: string;
-    country: string;
+  name: string;
+  image: string;
+  description: string;
+  country: string;
 }
 
 export const speakers: Person[] = [
@@ -59,77 +59,81 @@ export const speakers: Person[] = [
   },
 ];
 
-export const organizers: Person[] = [
-    {
-        name: 'Alberto Molina Pérez',
-        image: '',
-        description: 'University Of Granada',
-        country: '',
-    },
-    {
-        name: 'David Rodríguez-Arias Vailhen',
-        image: '',
-        description: 'University Of Granada',
-        country: '',
-    },
-    {
-        name: 'Gonzalo Díaz Cobacho',
-        image: '',
-        description: 'University Of Granada',
-        country: '',
-    },
-    {
-        name: 'Iris Parra Jounou',
-        image: '',
-        description: 'Universitat Autònoma de Barcelona',
-        country: '',
-    },
-    {
-        name: 'Jorge Suárez Muñoz',
-        image: '',
-        description: 'University Of Granada',
-        country: '',
-    },
-    {
-        name: 'Lucia Garzón',
-        image: '',
-        description: 'University Of Granada',
-        country: '',
-    },
-    {
-        name: 'Luis Espericueta',
-        image: '',
-        description: 'University Of Granada',
-        country: '',
-    },
-    {
-        name: 'Mar Vallés Poch',
-        image: '',
-        description: 'University Of Granada',
-        country: '',
-    },
-    {
-        name: 'María Victoria Martínez Lopez',
-        image: '',
-        description: 'University Of Granada',
-        country: '',
-    },
-    {
-        name: 'Perrine Galmiche',
-        image: '',
-        description: 'Université Paris-Saclay',
-        country: '',
-    },
-    {
-        name: 'Pia Dittke',
-        image: '',
-        description: 'University Of Münster',
-        country: '',
-    },
-    {
-        name: 'Berta Ruiz Lorenzana',
-        image: '',
-        description: 'University Of Granada',
-        country: '',
-    }
-]
+export const _organizers: Person[] = [
+  {
+    name: "Alberto Molina Pérez",
+    image: "",
+    description: "University Of Granada",
+    country: "",
+  },
+  {
+    name: "David Rodríguez-Arias Vailhen",
+    image: "",
+    description: "University Of Granada",
+    country: "",
+  },
+  {
+    name: "Gonzalo Díaz Cobacho",
+    image: "",
+    description: "University Of Granada",
+    country: "",
+  },
+  {
+    name: "Iris Parra Jounou",
+    image: "",
+    description: "Universitat Autònoma de Barcelona",
+    country: "",
+  },
+  {
+    name: "Jorge Suárez Muñoz",
+    image: "",
+    description: "University Of Granada",
+    country: "",
+  },
+  {
+    name: "Lucía Garzón",
+    image: "",
+    description: "University Of Granada",
+    country: "",
+  },
+  {
+    name: "Luis Espericueta",
+    image: "",
+    description: "University Of Granada",
+    country: "",
+  },
+  {
+    name: "Mar Vallès Poch",
+    image: "",
+    description: "University Of Granada",
+    country: "",
+  },
+  {
+    name: "María Victoria Martínez López",
+    image: "",
+    description: "University Of Granada",
+    country: "",
+  },
+  {
+    name: "Perrine Galmiche",
+    image: "",
+    description: "Université Paris-Saclay",
+    country: "",
+  },
+  {
+    name: "Pia Dittke",
+    image: "",
+    description: "University Of Münster",
+    country: "",
+  },
+  {
+    name: "Berta Ruiz Lorenzana",
+    image: "",
+    description: "University Of Granada",
+    country: "",
+  },
+];
+
+export const organizers = _organizers.sort((a, b) =>
+  a.name.split(" ").at(1)!.localeCompare(b.name.split(" ").at(1)!)
+);

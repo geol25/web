@@ -5,12 +5,12 @@ import Container from "../Container.astro";
 <section class="hero md:min-h-screen flex items-center -mx-4 px-4">
   <Container>
     <h1
-      class="main-title max-w-lg font-bold text-center text-white text-5xl md:text-7xl mx-auto uk-animation-slide-left-small"
+      class="main-title font-bold text-center text-white text-5xl md:text-7xl mx-auto uk-animation-slide-left-small"
     >
       Granada Conference on End-of-Life:
       <br />
       <span class="text-3xl md:text-5xl block mt-5 uk-text-italic"
-        >Evidence Based Ethics and Policy-making</span
+        >Evidence-Based Ethics and Policy-making</span
       >
     </h1>
 
@@ -60,6 +60,11 @@ import Container from "../Container.astro";
 </section>
 
 <style>
+
+  .main-title {
+    max-width: 700px;
+  }
+
   .hero {
     background-image: url(/hero.webp);
     background-size: cover;
