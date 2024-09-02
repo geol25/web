@@ -132,6 +132,18 @@ export const _organizers: Person[] = [
     description: "University Of Granada",
     country: "",
   },
+  {
+    name: "Jon Rueda",
+    image: "",
+    description: "University Of Granada",
+    country: "",
+  },
+  {
+    name: "Isabel Roldán",
+    image: "",
+    description: "University Of Granada",
+    country: "",
+  },
 ];
 
 export const organizers = _organizers.sort((a, b) =>
