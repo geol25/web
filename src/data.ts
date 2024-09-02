@@ -61,31 +61,31 @@ export const speakers: Person[] = [
 
 export const _organizers: Person[] = [
   {
-    name: "Alberto Molina Pérez",
+    name: "Alberto Molina",
     image: "",
     description: "University Of Granada",
     country: "",
   },
   {
-    name: "David Rodríguez-Arias Vailhen",
+    name: "David Rodríguez-Arias",
     image: "",
     description: "University Of Granada",
     country: "",
   },
   {
-    name: "Gonzalo Díaz Cobacho",
+    name: "Gonzalo Díaz",
     image: "",
     description: "University Of Granada",
     country: "",
   },
   {
-    name: "Iris Parra Jounou",
+    name: "Iris Parra",
     image: "",
     description: "Universitat Autònoma de Barcelona",
     country: "",
   },
   {
-    name: "Jorge Suárez Muñoz",
+    name: "Jorge Suárez",
     image: "",
     description: "University Of Granada",
     country: "",
@@ -103,13 +103,13 @@ export const _organizers: Person[] = [
     country: "",
   },
   {
-    name: "Mar Vallès Poch",
+    name: "Mar Vallès",
     image: "",
     description: "University Of Granada",
     country: "",
   },
   {
-    name: "María Victoria Martínez López",
+    name: "María Victoria Martínez",
     image: "",
     description: "University Of Granada",
     country: "",
@@ -127,7 +127,7 @@ export const _organizers: Person[] = [
     country: "",
   },
   {
-    name: "Berta Ruiz Lorenzana",
+    name: "Berta Ruiz",
     image: "",
     description: "University Of Granada",
     country: "",
@@ -135,13 +135,13 @@ export const _organizers: Person[] = [
   {
     name: "Jon Rueda",
     image: "",
-    description: "University Of Granada",
+    description: "University of the Basque Country",
     country: "",
   },
   {
     name: "Isabel Roldán",
     image: "",
-    description: "University Of Granada",
+    description: "University of Salamanca",
     country: "",
   },
 ];
