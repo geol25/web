@@ -6,9 +6,10 @@ interface Props {
   country: string;
   slideFrom: "left" | "right";
   organizer?: boolean;
+  talkTitle?: string;
 }
 
-const { name, image, description, country, organizer = false } = Astro.props;
+const { name, image, description, country, organizer = false, talkTitle = ""} = Astro.props;
 const { slideFrom = "" } = Astro.props;
 const classList = `card yellow ${organizer ? "organizer" : ""}`;
 ---
@@ -23,6 +24,11 @@ const classList = `card yellow ${organizer ? "organizer" : ""}`;
   <div class="content">
     <h2 class="name uk-h3">{name}</h2>
     <p class="description">{description}</p>
+    {
+      talkTitle !== "" ? (
+        <p class="talk-title">{talkTitle}</p>
+      ) : null
+    }
     {
       country !== "" ? (
         <p class="pill">
@@ -74,6 +80,12 @@ const classList = `card yellow ${organizer ? "organizer" : ""}`;
   .description {
     font-size: 24px;
   }
+
+  .talk-title {
+    font-size: 18px;
+    font-style: italic;
+  }
+
   .pill {
     font-size: 16px;
     padding: 8px;

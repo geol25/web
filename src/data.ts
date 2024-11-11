@@ -24,6 +24,7 @@ export interface Person {
   image: string;
   description: string;
   country: string;
+  talkTitle?: string;
 }
 
 export const speakers: Person[] = [
@@ -31,30 +32,35 @@ export const speakers: Person[] = [
     name: "Walter Glannon",
     image: "/speakers/speaker_glannon.webp",
     description: "Professor Emeritus at the University of Calgary",
+    talkTitle: "Medical Assistance in Dying for Psychiatric Disorders: A Canadian Perspective",
     country: "Canada",
   },
   {
     name: "Bregje Onwuteaka-Philipsen",
     image: "/speakers/speaker_bregje.webp",
     description: "Full Professor at Amsterdam UMC University",
+    talkTitle: "30 year of research on euthanasia and other end of life decision: how did it inform practice and debate?",
     country: "Netherlands",
   },
   {
     name: "Roeline Pasman",
     image: "/speakers/speaker_roeline.webp",
     description: "Associate Professor at Amsterdam UMC University",
+    talkTitle: "Trends in Dutch citizens’ and heaht care professionals’ views on life termination with and without physician involvement",
     country: "Netherlands",
   },
   {
     name: "Sean Riley",
     image: "/speakers/speaker_sean.webp",
     description: "Research Associate at the Ohio State University",
+    talkTitle: "Watching the Watchmen—An Update",
     country: "United States",
   },
   {
     name: "Stuart J. Youngner",
     image: "/speakers/speaker_stuart.webp",
     description: "Professor Emeritus at the Case Western Reserve University",
+    talkTitle: "‘Filter’ as a metaphor in MAiD policy-making",
     country: "United States",
   },
 ];

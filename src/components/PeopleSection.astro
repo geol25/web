@@ -21,6 +21,7 @@ const { people, organizers = false } = Astro.props;
                     country={person.country}
                     slideFrom={index % 2 === 0 ? 'left' : 'right'}
                     organizer={organizers}
+                    talkTitle={person.talkTitle ?? ''}
                 />
             ))
         }
