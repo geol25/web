@@ -2,7 +2,8 @@
 import Container from "../components/Container.astro";
 import HeroAurora from "../components/HeroAurora.astro";
 import PeopleSection from "../components/PeopleSection.astro";
-import { organizers } from "../data";
+import TitleHighlight from "../components/TitleHighlight.astro";
+import { colors, organizers } from "../data";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -17,14 +18,57 @@ import Layout from "../layouts/Layout.astro";
     </HeroAurora>
 
     <Container>
-		<section class="uk-section uk-background-default mt-48 md:mt-24">
+    <section class="uk-section uk-background-default mt-48 md:mt-24 md:text-center">
+      <h2 class="uk-h2 mb-10">
+        REGISTRATION AND PAYMENT OF REGISTRATION FEE
+      </h2>
+      <h3 class="uk-h3 mb-5">Early registration (until November 30, 2024):</h3>
+      <p class="uk-text-large leading-loose mb-10">
+        <strong>150</strong> euros for senior scholars (more than 5 years after PhD).
+        <br>
+        <strong>50</strong> euros for junior scholars (within 5 years of receiving PhD).
+      </p>
+      <h3 class="uk-h3 mb-5">Late registration (until January 31, 2025):</h3>
+      <p class="uk-text-large leading-loose mb-10">
+        <strong>200</strong> euros for senior scholars (more than 5 years after PhD).
+        <br>
+        <strong>75</strong> euros for junior scholars (within 5 years of receiving PhD).
+      </p>
+      <h3 class="uk-h3 mb-5">IMPORTANT: Details for the payment:</h3>
+      <p class="uk-text-large leading-loose mb-10">The payment must be made via bank transfer to the following account:</p>
+      <p class="uk-text-large leading-loose mb-10">
+        <strong>Bank name:</strong> CAIXABANK
+        <br>
+        <strong>Account holder:</strong> Universidad de Granada
+        <br>
+        <strong>Payment reference:</strong> GCEL + [Full Name]
+        <br>
+        <strong>IBAN:</strong> ES58 2100 4224 3913 0072 0546
+        <br>
+        <strong>Address:</strong> C/ GRAN VÍA DE COLÓN N. 19, 18001 GRANADA
+        <br>
+        <strong>Bank identification code (SWIFT/BIC):</strong> CAIXESBBXXX
+      </p>
+      <p class="uk-text-large leading-loose mb-10">It is important that the reference code <strong>"GCEL + full name"</strong> is included in the transfer details. Once the transfer is completed, the payment receipt should be sent to the following email address: <a href="mailto:gconferenceeol@gmail.com" class="font-bold underline">gconferenceeol@gmail.com</a></p>
+    </section>
+		<section class="uk-section uk-background-default">
 			<div class="flex justify-center items-center gap-2 text-2xl flex-col md:flex-row">
 				<span uk-icon="icon: mail; ratio: 4" aria-label="Info"></span>
 			</div>
 			<h2 class="uk-h1 text-center ">Granada Conference on End-of-Life</h2>
 			<div class="my-10 divider"></div>
-			<p class="text-center uk-h2 font-normal">More information and queries: <br> <a href="mailto:gconferenceeol@gmail.com" class="block mt-2 font-bold underline text-xl">gconferenceeol@gmail.com</a></p>
-
+			<p class="text-center uk-h2 font-normal mb-5">More information and queries: <br> <a href="mailto:gconferenceeol@gmail.com" class="block mt-2 font-bold underline text-xl">gconferenceeol@gmail.com</a></p>
+      <a
+      href="gcel-survival-guide.pdf"
+      target="_blank"
+      class="hover:-translate-y-2 transition-all py-4 h-fit text-center border-none font-bold text-2xl w-10/12 md:w-1/2 mt-5"
+    >
+      <TitleHighlight highlightColor={colors.red} delay={200}>
+          <span class="btn-content">
+              Survival Guide <span uk-icon="icon: chevron-double-right; ratio: 2"></span>
+          </span>
+      </TitleHighlight>
+    </a>
 		</section>
 
       <h2 class="uk-h1 text-center mt-5 -mb-10">Organizers</h2>
@@ -45,5 +89,11 @@ import Layout from "../layouts/Layout.astro";
 		border-bottom: 3px solid black;
 		max-width: 200px;
 		margin-inline: auto;
+  }
+
+  .btn-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
   }
 </style>
