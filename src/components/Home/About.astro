@@ -1,14 +1,46 @@
 ---
+import { colors } from "../../data";
 import Container from "../Container.astro";
+import TitleHighlight from "../TitleHighlight.astro";
 ---
 
 <section class="uk-section uk-background-default">
-    <Container>
-      <h2 class="uk-h2 mb-10">
-        Conference Theme
-      </h2>
-      <p class="uk-text-large leading-loose">
-        The <strong><i>Granada Conference on End-of-Life: Evidence-based ethics and policy-making</i></strong> welcomes international <strong>scholars</strong>, <strong>clinicians</strong>, <strong>legal experts</strong>, and <strong>policy-makers</strong> interested in <strong>empirical analysis</strong> and <strong>regulatory aspects</strong> related to <strong>medical aid-in-dying (MAID)</strong> and other <strong>end-of-life practices</strong>, including palliative sedation, withholding/withdrawal of life-sustaining-therapies, and advance care planning, etc.
-      </p>
-    </Container>
+  <Container>
+    <h2 class="uk-h2 mb-10">Conference Theme</h2>
+    <p class="uk-text-large leading-loose mb-5">
+      The <strong
+        ><i
+          >Granada Conference on End-of-Life: Evidence-based ethics and
+          policy-making</i
+        ></strong
+      > welcomes international <strong>scholars</strong>, <strong
+        >clinicians</strong
+      >, <strong>legal experts</strong>, and <strong>policy-makers</strong> interested
+      in <strong>empirical analysis</strong> and <strong
+        >regulatory aspects</strong
+      > related to <strong>medical aid-in-dying (MAID)</strong> and other <strong
+        >end-of-life practices</strong
+      >, including palliative sedation, withholding/withdrawal of
+      life-sustaining-therapies, and advance care planning, etc.
+    </p>
+    <a
+      href="/gcel_programme.pdf"
+      target="_blank"
+      class="hover:-translate-y-2 transition-all py-4 h-fit text-center border-none font-bold text-2xl w-10/12 md:w-1/2 mt-3"
+    >
+      <TitleHighlight highlightColor={colors.red} delay={600}>
+        <span class="btn-content">
+          Programme <span uk-icon="icon: chevron-double-right; ratio: 1.5"
+          ></span>
+        </span>
+      </TitleHighlight>
+    </a>
+  </Container>
 </section>
+<style>
+  .btn-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>

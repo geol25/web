@@ -32,21 +32,24 @@ export const speakers: Person[] = [
     name: "Walter Glannon",
     image: "/speakers/speaker_glannon.webp",
     description: "Professor Emeritus at the University of Calgary",
-    talkTitle: "Medical Assistance in Dying for Psychiatric Disorders: A Canadian Perspective",
+    talkTitle:
+      "Medical Assistance in Dying for Psychiatric Disorders: A Canadian Perspective",
     country: "Canada",
   },
   {
     name: "Bregje Onwuteaka-Philipsen",
     image: "/speakers/speaker_bregje.webp",
     description: "Full Professor at Amsterdam UMC University",
-    talkTitle: "30 year of research on euthanasia and other end of life decision: how did it inform practice and debate?",
+    talkTitle:
+      "30 year of research on euthanasia and other end of life decision: how did it inform practice and debate?",
     country: "Netherlands",
   },
   {
     name: "Roeline Pasman",
     image: "/speakers/speaker_roeline.webp",
     description: "Associate Professor at Amsterdam UMC University",
-    talkTitle: "Trends in Dutch citizens’ and heaht care professionals’ views on life termination with and without physician involvement",
+    talkTitle:
+      "Trends in Dutch citizens’ and health care professionals’ views on life termination with and without physician involvement",
     country: "Netherlands",
   },
   {
@@ -68,6 +71,18 @@ export const speakers: Person[] = [
 export const _organizers: Person[] = [
   {
     name: "Alberto Molina",
+    image: "",
+    description: "University Of Granada",
+    country: "",
+  },
+  {
+    name: "Rosa López",
+    image: "",
+    description: "University Of Granada",
+    country: "",
+  },
+  {
+    name: "Nerea Molina",
     image: "",
     description: "University Of Granada",
     country: "",
