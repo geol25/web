@@ -29,12 +29,11 @@ export interface Person {
 
 export const speakers: Person[] = [
   {
-    name: "Walter Glannon",
-    image: "/speakers/speaker_glannon.webp",
-    description: "Professor Emeritus at the University of Calgary",
-    talkTitle:
-      "Medical Assistance in Dying for Psychiatric Disorders: A Canadian Perspective",
-    country: "Canada",
+    name: "Ivar R. Hannikainen",
+    image: "/speakers/speaker_ivar.webp",
+    description: "Researcher at the University of Granada",
+    talkTitle: "The experimental jurisprudence of medical aid-in-dying",
+    country: "Spain",
   },
   {
     name: "Bregje Onwuteaka-Philipsen",
